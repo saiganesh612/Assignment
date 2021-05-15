@@ -44,3 +44,39 @@ Card Styles
     border: none !important;
     box-shadow: 0px 1px 18px 8px #00000014;
 }
+
+.button{
+    background-color: white !important;
+    border: none !important;
+    color: #00737a !important;
+    font-weight: 600 !important;
+}
+
+/*---------------------------------
+Modal Styles
+----------------------------------*/
+
+#modal{
+    border: none !important;
+    border-radius: 28px !important;
+    width: 1000px;
+    height: 500px;
+    top: 20% !important;
+    left: 20% !important;
+}
+
+#modal .row{
+    margin: 2em;
+}
+
+#modal p{
+    margin-top: 1em;
+}
+
+#modal button{
+    margin-top: 2em;
+    width: 100px;
+    background: #00737A;
+    color: white;
+    border-radius: 10px;
+}

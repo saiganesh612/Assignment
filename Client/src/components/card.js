@@ -1,7 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
+import CreateModal from "./modal"
 
 const Card = (props) => {
+    const [displayModal, setDisplayModal] = useState(false)
+    const [playVideo, setPlayVideo] = useState(false)
     const data = props.info;
+
+    const handleClick = () => {
+        setDisplayModal(true)
+        setPlayVideo(true)
+    }
 
     return (
         <>
@@ -10,8 +18,17 @@ const Card = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{data.heading}</h5>
                     <p className="card-text">{data.small_desc}</p>
-                    <a href="/">Try it</a>
+                    <button className="btn button" style={{ paddingLeft: 0 }} onClick={handleClick}>
+                        Try it&nbsp;&nbsp;<i className="fas fa-angle-right"></i>
+                    </button>
                 </div>
+                <CreateModal
+                    data={data}
+                    displayModal={displayModal}
+                    setDisplayModal={setDisplayModal}
+                    playVideo={playVideo}
+                    setPlayVideo={setPlayVideo}
+                />
             </div>
         </>
     )
